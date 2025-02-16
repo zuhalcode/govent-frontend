@@ -5,7 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import authServices from "@/services/auth";
 import { useMutation } from "@tanstack/react-query";
 import { useRouter } from "next/router";
-import { IRegister } from "@/types/Auth";
+import { IRegister } from "@/types";
 
 const registerSchema = yup.object().shape({
   fullName: yup.string().required("Please input your fullname"),
