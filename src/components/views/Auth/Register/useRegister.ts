@@ -2,10 +2,10 @@ import { useState } from "react";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import authServices from "@/services/auth";
+import authServices from "@/services/auth.service";
 import { useMutation } from "@tanstack/react-query";
 import { useRouter } from "next/router";
-import { IRegister } from "@/types";
+import { IRegister } from "@/types/Auth";
 
 const registerSchema = yup.object().shape({
   fullName: yup.string().required("Please input your fullname"),
@@ -44,6 +44,7 @@ const useRegister = () => {
     handleSubmit,
     formState: { errors },
     setError,
+    reset,
   } = useForm({
     resolver: yupResolver(registerSchema),
   });
@@ -60,6 +61,7 @@ const useRegister = () => {
     },
     onSuccess: () => {
       router.push("/auth/register/success");
+      reset();
     },
   });
 

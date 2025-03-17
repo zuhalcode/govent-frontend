@@ -24,9 +24,9 @@ const RegisterSuccess = () => {
             </div>
 
             <div className="space-y-3">
-              <h1 className="text-2xl font-semibold">Well Done !</h1>
+              <h1 className="text-2xl font-semibold">Create Account Success</h1>
               <h2 className="max-w-sm text-lg">
-                Aww yeah, you successfully read this important message.
+                Check your email for account activation
               </h2>
             </div>
 

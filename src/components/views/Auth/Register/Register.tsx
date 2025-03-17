@@ -52,7 +52,7 @@ const Register = () => {
             <p className="text-small">
               Have an account? &nbsp;
               <Link
-                href="/login"
+                href="/auth/login"
                 className="font-semibold text-danger-400 underline-offset-2 hover:underline"
               >
                 Login here
